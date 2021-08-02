@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehículos TypeScript</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/general.css">
+  <script src="../models/car.js"></script>
+  <script src="../models/wheel.js"></script>
+  <script src="../controllers/controller.js"></script>
+</head>
+
+<body background="img/fast.jpg">
+
+  <div class="container mt-5 text-start">
+    <h1>Ejercicio vehículos</h1>
+    <form class="d-flex flex-row bd-highlight mb-3 mt-4 d-flex justify-content-start">
+      <div class="form-group ms-5">
+        <label for="matricula">Matrícula</label>
+        <input type="text" id="matricula" class="form-control" onkeyup="validarMatricula(event)" />
+        <div class="cajas" id="caja1"></div>
+      </div>
+      <div class="form-group ms-5">
+        <label for="marca">Marca</label>
+        <input type="text" id="marca" class="form-control" onkeyup="validarMarca(event)" />
+        <div class="cajas" id="caja2"></div>
+      </div>
+      <div class="form-group ms-5">
+        <label for="color">Color</label>
+        <input type="text" id="color" class="form-control" onkeyup="validarColor(event)" />
+        <div class="cajas" id="caja3"></div>
+      </div>
+    </form>
+    <div class="position-relative">
+      <input type="button" class="btn btn-primary mt-4 d-flex justify-content-center" value="Create Car"
+        onclick="guardar(event)" />
+      <span id="mensaje" class="mt-4">Rellena todos los campos</span>
+    </div>
+    <div id="listado_coches" class="mt-5">
+      <h4>Listado de coches:</h4>
+      <ul id="listado"></ul>
+      <div class="cajas" id="caja12"></div>
+    </div>
+    <!-- **********RUEDAS***************** -->
+    <div class="container mt-5 text-start">
+      <form class="d-flex flex-row bd-highlight mb-3 mt-4 d-flex justify-content-start row row-cols-5">
+        <div class="form-group ms-5 col">
+          <label for="marcaRueda1">Marca Rueda 1</label>
+          <input type="text" id="marcaRueda1" class="form-control" onkeyup="validarMarcaRueda1(event)" />
+          <div class="cajas" id="caja4"></div>
+        </div>
+        <div class="form-group ms-5 col">
+          <label for="diametroRueda1">Diámetro Rueda 1</label>
+          <input type="text" id="diametroRueda1" class="form-control" onkeyup="validarDiametro1(event)" />
+          <div class="cajas" id="caja5"></div>
+        </div>
+        <div class="form-group ms-5 col">
+          <label for="marcaRueda2">Marca Rueda 2</label>
+          <input type="text" id="marcaRueda2" class="form-control" onkeyup="validarMarcaRueda2(event)" />
+          <div class="cajas" id="caja6"></div>
+        </div>
+        <div class="form-group ms-5 col">
+          <label for="diametroRueda2">Diámetro Rueda 2</label>
+          <input type="text" id="diametroRueda2" class="form-control" onkeyup="validarDiametro2(event)" />
+          <div class="cajas" id="caja7"></div>
+        </div>
+        <!-- Segunda Fila -->
+        <div class="form-group ms-5 col">
+          <label for="marcaRueda3">Marca Rueda 3</label>
+          <input type="text" id="marcaRueda3" class="form-control" onkeyup="validarMarcaRueda3(event)" />
+          <div class="cajas" id="caja8"></div>
+        </div>
+        <div class="form-group ms-5 col">
+          <label for="diametroRueda3">Diámetro Rueda 3</label>
+          <input type="text" id="diametroRueda3" class="form-control" onkeyup="validarDiametro3(event)" />
+          <div class="cajas" id="caja9"></div>
+        </div>
+        <div class="form-group ms-5 col">
+          <label for="marcaRueda4">Marca Rueda 4</label>
+          <input type="text" id="marcaRueda4" class="form-control" onkeyup="validarMarcaRueda4(event)" />
+          <div class="cajas" id="caja10"></div>
+        </div>
+        <div class="form-group ms-5 col">
+          <label for="diametroRueda4">Diámetro Rueda 4</label>
+          <input type="text" id="diametroRueda4" class="form-control" onkeyup="validarDiametro4(event)" />
+          <div class="cajas" id="caja11"></div>
+        </div>
+
+      </form>
+
+      <div class="position-relative">
+        <input type="button" class="btn btn-primary mt-4 d-flex justify-content-center" value="Add Wheels"
+          onclick="guardarRuedas(event)" />
+        <span id="mensaje2" class="mt-4">Rellena todos los campos</span>
+      </div>
+      <div id="listado_ruedas" class="mt-5">
+        <h4>Listado de ruedas:</h4>
+        <ul id="listado2"></ul>
+        <div class="cajas" id="caja13"></div>
+      </div>
+</body>
+
+</html>

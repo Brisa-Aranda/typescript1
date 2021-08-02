@@ -1,0 +1,46 @@
+body{
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: $color1;
+        
+       label{
+         color: $color4;
+         font-weight: bold;
+       }
+       
+      .cajas{
+             background: $color2;
+             background: $color3;
+             border-radius: 5px;
+             margin-top: 2%;
+           }
+              ul#listado,
+              ul#listado2{
+                background: $color2;
+                background: $color3;
+                color: $color1;
+                list-style: none;
+              }
+              ul#listado li,
+              ul#listado2 li{
+                display: inline;
+                font-size: 120%;
+                padding: 3%;
+                border-radius: 5px;
+              }
+           
+              #mensaje,
+              #mensaje2{
+                display: none;
+                font-size: 180%;
+                background: $color2;
+                background: $color3;
+                color:$color1;
+                width: 55%;
+                border-radius: 5px;
+              }     
+}
+    
+  
+
